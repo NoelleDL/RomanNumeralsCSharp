@@ -6,7 +6,7 @@ namespace MoreRomanNumerals.Library
     {
         public static string Convert(int input)
         {
-            string output = "I";
+            string output = new string('I', input);
             return output;
         }
     }
