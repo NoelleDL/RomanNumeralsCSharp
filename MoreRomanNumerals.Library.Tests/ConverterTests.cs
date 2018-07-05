@@ -22,5 +22,13 @@ namespace MoreRomanNumerals.Library.Tests
             string output = Converter.Convert(input);
             Assert.AreEqual("II", output);
         }
+
+        [Test()]
+        public void ReturnsIV_When4()
+        {
+            int input = 4;
+            string output = Converter.Convert(input);
+            Assert.AreEqual("IV", output);
+        }
     }
 }
