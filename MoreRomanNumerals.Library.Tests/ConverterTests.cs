@@ -30,5 +30,13 @@ namespace MoreRomanNumerals.Library.Tests
             string output = Converter.Convert(input);
             Assert.AreEqual("IV", output);
         }
+
+        [Test()]
+        public void ReturnsV_When5()
+        {
+            int input = 5;
+            string output = Converter.Convert(input);
+            Assert.AreEqual("V", output);
+        }
     }
 }
