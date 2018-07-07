@@ -7,33 +7,28 @@ namespace MoreRomanNumerals.Library
     {
         public static string Convert(int input)
         {
-            string output = new string('I', input);
-            if (input == 4)
-            {
-                output = "IV";
-            }
-            else if (input == 5)
-            {
-                output = "V";
-            }
-            else if (input > 5 && input < 9)
-            {
-                var remainder = input % 5;
-                output = "V" + new string('I', remainder);
-            }
-            else if (input == 9)
-            {
-                output = "IX";
-            }
-            else if (input == 10)
+            string output = "";
+            if (input == 10) 
             {
                 output = "X";
             }
-            else
+            else if (input >= 9)
             {
-                return output;
+                output = "IX";
             }
-            return output;
+            else if (input >= 5)
+            {
+                output = "V" + Convert(input - 5);
+            }
+            else if (input >= 4)
+            {
+                output = "IV";
+            }
+            else if (input >= 1)
+            {
+                output = "I" + Convert(input - 1); 
+            }
+            return output; 
         }
     }
 }
