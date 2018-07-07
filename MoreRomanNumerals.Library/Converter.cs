@@ -7,7 +7,11 @@ namespace MoreRomanNumerals.Library
         public static string Convert(int input)
         {
             string output = "";
-            if (input >= 10) 
+            if (input >= 40)
+            {
+                output = "XL" + Convert(input - 40);
+            }
+            else if (input >= 10) 
             {
                 output = "X" + Convert(input - 10);
             }
