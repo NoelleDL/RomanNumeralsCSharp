@@ -46,5 +46,13 @@ namespace MoreRomanNumerals.Library.Tests
             string output = Converter.Convert(input);
             Assert.AreEqual("VI", output);
         }
+
+        [Test()]
+        public void ReturnsX_When10()
+        {
+            int input = 10;
+            string output = Converter.Convert(input);
+            Assert.AreEqual("X", output);
+        }
     }
 }

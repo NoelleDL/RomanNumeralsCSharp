@@ -16,10 +16,14 @@ namespace MoreRomanNumerals.Library
             {
                 output = "V";
             }
-            else if (input > 5)
+            else if (input > 5 && input < 9)
             {
                 var remainder = input % 5;
                 output = "V" + new string('I', remainder);
+            }
+            else if (input == 10)
+            {
+                output = "X";
             }
             else
             {
