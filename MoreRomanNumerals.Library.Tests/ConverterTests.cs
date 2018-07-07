@@ -38,5 +38,13 @@ namespace MoreRomanNumerals.Library.Tests
             string output = Converter.Convert(input);
             Assert.AreEqual("V", output);
         }
+
+        [Test()]
+        public void ReturnsVI_When6()
+        {
+            int input = 6;
+            string output = Converter.Convert(input);
+            Assert.AreEqual("VI", output);
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic; 
 
 namespace MoreRomanNumerals.Library
 {
@@ -14,6 +15,15 @@ namespace MoreRomanNumerals.Library
             else if (input == 5)
             {
                 output = "V";
+            }
+            else if (input > 5)
+            {
+                var remainder = input % 5;
+                output = "V" + new string('I', remainder);
+            }
+            else
+            {
+                return output;
             }
             return output;
         }
