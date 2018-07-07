@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic; 
 
 namespace MoreRomanNumerals.Library
 {
@@ -8,9 +7,9 @@ namespace MoreRomanNumerals.Library
         public static string Convert(int input)
         {
             string output = "";
-            if (input == 10) 
+            if (input >= 10) 
             {
-                output = "X";
+                output = "X" + Convert(input - 10);
             }
             else if (input >= 9)
             {

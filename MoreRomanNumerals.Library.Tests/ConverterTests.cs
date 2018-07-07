@@ -62,5 +62,12 @@ namespace MoreRomanNumerals.Library.Tests
             string output = Converter.Convert(input);
             Assert.AreEqual("IX", output);
         }
+        [Test()]
+        public void ReturnsXI_When11()
+        {
+            int input = 11;
+            string output = Converter.Convert(input);
+            Assert.AreEqual("XI", output); 
+        }
     }
 }
