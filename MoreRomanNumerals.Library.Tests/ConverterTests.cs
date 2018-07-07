@@ -54,5 +54,13 @@ namespace MoreRomanNumerals.Library.Tests
             string output = Converter.Convert(input);
             Assert.AreEqual("X", output);
         }
+
+        [Test()]
+        public void ReturnsIX_When9()
+        {
+            int input = 9;
+            string output = Converter.Convert(input);
+            Assert.AreEqual("IX", output);
+        }
     }
 }
